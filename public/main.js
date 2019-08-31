@@ -1,6 +1,3 @@
-var video = document.querySelector("#video");
-
-var remoteControl = new RemoteControl(video);
 var recognition = new webkitSpeechRecognition();
 recognition.continuous = true;
 recognition.interimResults = true;
