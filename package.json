@@ -1,0 +1,16 @@
+{
+  "name": "voice-recognition",
+  "version": "1.0.0",
+  "description": "voice recognition example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Albino",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "openssl": "^1.1.0"
+  }
+}
