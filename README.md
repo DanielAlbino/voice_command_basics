@@ -7,38 +7,40 @@ The Javascript API for speech recognition makes the voice manipulation easier fo
 
 First of all lets create our folder
 
-´´´bash
+```bash
   mkdir voice_command
-´´´
+```
 
 Now that we have our folder created lets go and use Node.js to creade our secure localhost
 
 **Initialize the npm**
 
-´´´bash
+```bash
   npm init
-´´´
+```
 
 now lets install express and https
-´´´bash
+
+```bash
   npm install https express
-´´´
+```
 
 **Create private keys**
+
 we have to generate the privatekey.pem and certificate.pem files. for that you must have Openssl in your computer.
 if you don't have just go to: https://www.openssl.org/ and download the tar.gz file and extracted, than you have to go to your prompt and go to the folder where you have your opensll files e.g **cd c/openssl/bin** than you can use the following commands:
 
-´´´bash
+```bash
   openssl genrsa -out privatekey.pem 1024 
   openssl req -new -key privatekey.pem -out certrequest.csr 
   openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
-´´´
+```
 
 #Creating the server
 
 Now let's create our server, first you have to create the **server.js** file and than insert the following code
 
-´´´bash
+```bash
 var fs = require("fs");
 var https = require('https');
 var express = require('express');
@@ -61,11 +63,11 @@ console.log("link: https://localhost:8000");
   res.sendFile(__dirname + '/public/index.html');
 });
 
-´´´
+```
 now that we have our server file created we now need to create the **public** folder and than create the file **index.html** inside.
 In the **index.html** we will create our main page and call the js files that we are going to create next.
 
-´´´bash 
+```bash 
 <!DOCTYPE html>
 <html>
   <head>
@@ -81,7 +83,7 @@ In the **index.html** we will create our main page and call the js files that we
     <script src='main.js'></script>
   </body>
 </html>
-´´´
+```
 
 # Creating JS files
 
@@ -89,7 +91,7 @@ Like I said previously we need to create the **main.js** file
 
 **main.js**
 
-´´´bash
+```bash
 var recognition = new webkitSpeechRecognition();
 recognition.continuous = true;
 recognition.interimResults = true;
@@ -111,10 +113,10 @@ recognition.onresult = function(event) {
     }
   }
 };
-´´´
+```
 now that you have your app created let's start the app.
 
-´´´bash
+```bash
   node server.js
-´´´
+```
 
