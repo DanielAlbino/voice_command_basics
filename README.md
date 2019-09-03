@@ -65,7 +65,7 @@ console.log("link: https://localhost:8000");
 
 ```
 now that we have our server file created we now need to create the **public** folder and than create the file **index.html** inside.
-In the **index.html** we will create our main page and call the js files that we are going to create next.
+In the **index.html** we will create our main page and call the js files that we are going to use.
 
 ```bash 
 <!DOCTYPE html>
