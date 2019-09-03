@@ -19,7 +19,7 @@ Now that we have our folder created lets go and use Node.js to creade our secure
   npm init
 ```
 
-now lets install express and https
+now let's install express and https
 
 ```bash
   npm install https express
@@ -27,7 +27,7 @@ now lets install express and https
 
 **Create private keys**
 
-we have to generate the privatekey.pem and certificate.pem files. for that you must have Openssl in your computer.
+we have to generate the **privatekey.pem** and **certificate.pem** files. for that you must have Openssl in your computer.
 if you don't have just go to: https://www.openssl.org/ and download the tar.gz file and extracted, than you have to go to your prompt and go to the folder where you have your opensll files e.g **cd c/openssl/bin** than you can use the following commands:
 
 ```bash
