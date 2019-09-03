@@ -36,7 +36,7 @@ if you don't have just go to: https://www.openssl.org/ and download the tar.gz f
   openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
 ```
 
-#Creating the server
+# Creating the server
 
 Now let's create our server, first you have to create the **server.js** file and than insert the following code
 
