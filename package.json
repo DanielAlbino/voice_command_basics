@@ -9,7 +9,7 @@
   "author": "Daniel Albino",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "https": "^1.0.0",
     "openssl": "^1.1.0"
   }
